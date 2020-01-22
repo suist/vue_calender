@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-
-    <Calender msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <router-view/>
+    
   </div>
 </template>
 
 <script>
-import Calender from './components/Calender.vue'
+// import Calender from './components/Calender.vue'
+import Header from './components/Header'
 
 export default {
   name: 'app',
   components: {
-    Calender
+    
+    Header,
+ 
   }
 }
 </script>
@@ -23,6 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
   color: #2c3e50;
-  margin-top: 60px;
+
+  
 }
+
 </style>

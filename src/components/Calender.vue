@@ -4,7 +4,7 @@
     <ul>
       <li class="prev"><i class="fa fa-fw fa-chevron-left" @click="subtractMonth" ></i></li>
       <li class ="next"><i class="fa fa-fw fa-chevron-right" @click="addMonth" ></i></li>
-      <li  id="monthTitle">{{month + ' - ' + year}}</li>
+      <li id="monthTitle">{{month + ' - ' + year}}</li>
       
     </ul>
  
@@ -21,7 +21,7 @@
 
     <ul class = "dates">
       <li class="box" v-for="(blank,index) in firstDayOfMonth" :key="index">&nbsp;
-      <li class= "box" v-for="(date,index) in daysInMonth " :key="index"
+      <li class= "box" v-for="(date,index1) in daysInMonth " :key="index1"
       :class="{'current-day':date == initialDate &amp;&amp; month == initialMonth && year == initialYear}">
       
 
