@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home.vue'
 import Theme from '../components/Theme.vue'
-import Calender from '../components/Calender.vue'
-
+import Calender1 from '../components/Calender1.vue'
+import Beta from '../components/Theme/Themes.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,9 +19,15 @@ const routes = [
   
   },
   {
-    path: '/calender',
-    name: 'calender',
-    component : Calender
+    path: '/calender1',
+    name: 'calender1',
+    component : Calender1
+  
+  },
+  {
+    path: '/beta',
+    name: 'beta',
+    component : Beta
   
   },
 

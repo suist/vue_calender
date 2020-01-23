@@ -6,11 +6,11 @@
         </div>
 
         <ul class="flex table">
-            <router-link to="/theme" class="table-cell" activeClass="active" tag="li">서비스안내</router-link>
+            <router-link to="/" class="table-cell" activeClass="active" tag="li">서비스안내</router-link>
             <router-link to="/theme" class="table-cell" activeClass="active" tag="li">테마</router-link>
-            <router-link to="/theme" class="table-cell" activeClass="active" tag="li">맞춤 제작 신청</router-link>
-            <router-link to="/theme" class="table-cell" activeClass="active" tag="li">고객센터</router-link>
-            <router-link to="/theme" class="table-cell" activeClass="active" tag="li">로그인</router-link>
+            <router-link to="/calender1" class="table-cell" activeClass="active" tag="li">캘린더</router-link>
+            <router-link to="/beta" class="table-cell" activeClass="active" tag="li">고객센터</router-link>
+            <router-link to="/" class="table-cell" activeClass="active" tag="li">로그인</router-link>
                    
        
             
@@ -26,13 +26,20 @@
 
 </script>
 
-<style>
+<style scoped>
 
 body {
     color: #4a4a4a;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+}
+
+@media (max-width: 600px){
+.header-container {
+    padding: 0;
+    height: 100px;
+}
 }
 
 .header-container{
@@ -115,7 +122,9 @@ li:hover {
   color:white;
    cursor: pointer;
 }
-a:active {
-     font-weight: bold;
+
+
+.route-link-active{
+    font-weight: bold
 }
 </style>
