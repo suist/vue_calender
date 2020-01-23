@@ -5,8 +5,8 @@
            <img src="https://launchpack.co.kr/static/img/logo@3x.fb49d82.png" alt="" class="unselect">
         </div>
 
-        <ul class="flex table">
-            <router-link to="/" class="table-cell" activeClass="active" tag="li">서비스안내</router-link>
+        <ul class="flex header-menu table">
+            <router-link to="/" class="table-cell"  tag="li">서비스안내</router-link>
             <router-link to="/theme" class="table-cell" activeClass="active" tag="li">테마</router-link>
             <router-link to="/calender1" class="table-cell" activeClass="active" tag="li">캘린더</router-link>
             <router-link to="/beta" class="table-cell" activeClass="active" tag="li">고객센터</router-link>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 
 
 </script>
@@ -71,35 +72,67 @@ body {
     overflow: hidden;
     width:100%;
 }
-.container{
-    
+
+@media screen and (min-width: 1088px){
+.container {
+    max-width: 960px;
+    width: 960px;
+}
 }
 
+.container {
+    margin: 0 auto;
+    position: relative;
+}
 .header #logo {
     width: 160px;
     height: 100%;
+    padding-left: 10px;
   
 
 }
+@media (max-width: 600px){
+.header #logo {
+    height: 50px;
+    margin: 0 auto;
+    
+}}
 
 .header #logo img {
     
-    width: 145px;
-    margin-left: 10px;
+        width: 145px;
     height: 34px;
-    margin-top: 17px;
+    margin-top: 25px;
 }
 
 .table{
-    display: inline-block;
+    display: table;
     width: 100%;
 }
+@media (min-width: 601px){
+.header div, .header-menu {
+    width: 580px;
+}}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+@media (max-width: 600px){
+.menu {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}}
+@media (max-width: 600px){
+.header div, .header-menu {
+    width: 100%;
+    font-size: .85rem;
+    padding: 7px 0 0;
+    margin-right: 0;
+    -ms-flex: 1;
+    flex: 1;
+}}
 .table-cell {
     display: table-cell;
     vertical-align: middle;
@@ -107,6 +140,11 @@ ul {
     height: 65px;
        
 }
+
+@media (max-width: 600px){
+.table-cell {
+    height: 40px;
+}}
 
 
 li{
@@ -124,7 +162,8 @@ li:hover {
 }
 
 
-.route-link-active{
-    font-weight: bold
+.router-link-exact-active{
+    font-weight: bold;
+    color:white
 }
 </style>

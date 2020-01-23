@@ -5,25 +5,43 @@
   </div>
   </div>
 
-  <div >
-         <ul class="lp-card-nav">
-            <li>Home</li>
-            <li>News</li>
-            <li>Contact</li>
+  <div class="lp-card-menu-title">
+         <ul class="container flex">
+            <li class="lp-menu unselect" @click="selected = 1" :class="{selected:selected == 1}">전체 테마</li>
+            <li class="lp-menu unselect" @click="selected = 2" :class="{selected:selected == 2}">로컬 전화연결 테마</li>
+            <li class="lp-menu unselect" @click="selected = 3" :class="{selected:selected == 3}">매장방문 예약 테마</li>
             
         </ul>
+        <div v-if="selected==1">
         <Themes/>
+        </div>
+        <div v-if="selected==2">
+        <Theme2/>
+        </div>
+        <div v-if="selected==3">
+        <Theme3/>
+        </div>
+
   </div>
 
 </div>
 </template>
 
 <script>
-import Themes from './Theme/Themes'
+import Themes from './Theme/Themes';
+import Theme2 from './Theme/Theme2';
+import Theme3 from './Theme/Theme3';
+
 export default {
+    data: function(){
+        return {selected: 1}
+ },
 
     components:{
-        Themes
+        Themes,
+        Theme2,
+        Theme3
+        
 
     }
 
@@ -42,14 +60,18 @@ export default {
 div{
     display: block
 }
+.flex {
+    display: -ms-flexbox;
+    display: flex;
+}
 
 .promotion{
     margin-top:70px;
 }
 
 .lp-promotion{
-    height: 300px;
-    border-bottom: 1px solid #e6e6e6;
+    height: 320px;
+    border-bottom: 2px solid #bdb9b9;
     
     position: relative;
     display: -ms-flexbox;
@@ -59,17 +81,16 @@ div{
 
 }
 
-.lp-card-nav{
+.lp-card-menu-title {
     width: 100%;
     height: 49px;
     background-color: #fff;
-    
 }
-.selected-menu{
-    color: #000;
-    font-weight: 700;
-    border-bottom: 3px solid #f60;
-}
+
+
+
+
+
 
 .lp-menu{
     cursor: pointer;
@@ -78,24 +99,19 @@ div{
     border-bottom: 2px solid transparent;
 }
 
-ul{
-    display: inline-block;
-    
-     list-style-type: none;
-  margin: 0;
-  padding: 0;
+.selected{
+    color: #000;
+    font-weight: 700;
+    border-bottom: 3px solid #f60;
 }
+
 li{
- display: block;
-  width: 60px;
-  cursor: pointer;
-    padding: 12px;
-    color: #606060;
-    border-bottom: 2px solid transparent;
+    list-style-type:none;
 }
 
 li:hover {
-  color:white;
+  color:rgb(71, 66, 66);
+  font-weight: bold;
    cursor: pointer;
 }
 </style>

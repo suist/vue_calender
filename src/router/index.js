@@ -4,6 +4,7 @@ import Home from '../components/Home.vue'
 import Theme from '../components/Theme.vue'
 import Calender1 from '../components/Calender1.vue'
 import Beta from '../components/Theme/Themes.vue'
+import Theme3 from '../components/Theme/Theme3'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,6 +29,12 @@ const routes = [
     path: '/beta',
     name: 'beta',
     component : Beta
+  
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component : Theme3
   
   },
 
